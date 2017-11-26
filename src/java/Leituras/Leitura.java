@@ -26,25 +26,25 @@ public static Leitura getInstance(){
 }
 
 //Ex.: private float temperature = (float)0.0; criar variavel que vai armazenar os ids enviaddos pelo leitor
-private float temperature = (float)0.0;
+private String leitura = "";
 
 private Leitura(){
-    this.temperature = (float)0.0; //construtor inicia variavel com valor zero
+    this.leitura = ""; //construtor inicia variavel com valor zero
 }
 
-public Leitura(float temperature){ //construtor armazena valor de temperatura
-    this.temperature = temperature;
+public Leitura(String listaids){ //construtor armazena valor de temperatura
+    this.leitura = listaids;
 }
 
-public void setValue (float temperature){
-    this.temperature = temperature;
+public void setValue (String listaids){
+    this.leitura = listaids;
 }
 
-public float getValue(){
-    return temperature;
+public String getValue(){
+    return leitura;
 }
 
-public void convertToFahrenheit(){
-    temperature = (float)1.8*temperature+32;
-}//comparar com lista de itens base
+//public void convertToFahrenheit(){
+    //temperature = (float)1.8*temperature+32;
+//}//comparar com lista de itens base
 }

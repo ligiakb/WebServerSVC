@@ -46,7 +46,7 @@ public class LeituraController extends Application {
     }
     
     @GET
-    @Path("convert temperature")
+    @Path("idslidos")
     @Produces(MediaType.APPLICATION_JSON)
     public Leitura getTemperature(){
         
