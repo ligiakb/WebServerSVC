@@ -5,6 +5,9 @@
  */
 package ControllerSVC;
 
+import java.util.*;
+
+
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Produces;
@@ -29,9 +32,9 @@ import javax.ws.rs.core.Request;
 @Path("controller")
 public class LeituraController extends Application {
 
-    private final static String TEMPERATURE = "valor";
+    private final static String LEITURA = "valor";
     
-    Leitura temperature = Leitura.getInstance();
+    Leitura leitura = Leitura.getInstance();
     
     @Context //permitem apenas a injeção de objetos dentro do nosso objeto do Controller
     UriInfo uriInfo;
@@ -50,21 +53,40 @@ public class LeituraController extends Application {
     @Produces(MediaType.APPLICATION_JSON)
     public Leitura getTemperature(){
         
-        System.out.println("Pedido de conversao pelo app cliente: "+ temperature.getValue());
-        temperature.convertToFahrenheit();
+        System.out.println("Pedido de conversao pelo app cliente: "+ leitura.getValue());
+        //leitura.convertToFahrenheit();//nosso método
         
-        return temperature;
+        return leitura;
     }
     
     @POST
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Produces(MediaType.APPLICATION_JSON)
-    public Leitura postTemperature(MultivaluedMap<String, String> parameters){
-        float temperatureInternal = Float.parseFloat(parameters.getFirst(TEMPERATURE));
-        temperature.setValue(temperatureInternal);
+    public Leitura postTemperature(String parameters){
+        String temperatureInternal = parameters;
+        leitura.setValue(temperatureInternal);
         
         System.out.println("Dados recebidos");
         
-        return temperature;
+        return leitura;
     }
+    
+   String s = "lorem,ipsum,dolor,sit,amet";
+
+    ArrayList<String> myList = new ArrayList<String>(Arrays.asList(s.split(",")));
+    
+    public static void printList(ArrayList<String> myList){
+        for(int i=0; i<myList.size();i++){
+        System.out.println(myList.get(i));
+       }
+}  
+    
 }
+    
+
+    
+   
+    
+    
+   
+
