@@ -17,6 +17,9 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
 
 import Leituras.*;
+import Transaction.Transaction;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.POST;
 import javax.ws.rs.core.Application;
@@ -33,6 +36,7 @@ import javax.ws.rs.core.Request;
 public class LeituraController extends Application {
 
     private final static String LEITURA = "valor";
+    
     
     Leitura leitura = Leitura.getInstance();
     
@@ -65,16 +69,26 @@ public class LeituraController extends Application {
     public Leitura postTemperature(String parameters){
         String temperatureInternal = parameters;
         leitura.setValue(temperatureInternal);
-        
         System.out.println("Dados recebidos");
+        String tagsCorrigidas = parameters.substring(9);
+        ArrayList<String> myList = new ArrayList<String>(Arrays.asList(tagsCorrigidas.split("%7c")));
+        printList(myList);
+        LeituraDAO dao = new LeituraDAO();
+        Transaction tr = new Transaction();
+        try {
+            ArrayList<String> itensCarro = dao.buscarPorIdCarro("123", tr);
+            //comparar listascomparaListas()
+            //obter lista de ids faltantes
+            //página que vai exibir o resultado deve fazer a solicitação para o WebServer
+            
+        } catch (Exception ex) {
+            Logger.getLogger(LeituraController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         
         return leitura;
     }
-    
-   String s = "lorem,ipsum,dolor,sit,amet";
-
-    ArrayList<String> myList = new ArrayList<String>(Arrays.asList(s.split(",")));
-    
+      
     public static void printList(ArrayList<String> myList){
         for(int i=0; i<myList.size();i++){
         System.out.println(myList.get(i));

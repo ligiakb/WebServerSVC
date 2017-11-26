@@ -17,7 +17,7 @@ import Transaction.Transaction;
  */
 public class LeituraDAO {
     
-public List<String> buscarPorIdCarro(String id, Transaction tr) throws Exception {
+public ArrayList<String> buscarPorIdCarro(String id, Transaction tr) throws Exception {
         Connection con = tr.obterConexao();
         String sql = "select id_tag_item from item_etiquetado where carro_idcarro = ?";
         PreparedStatement ps = con.prepareStatement(sql);
@@ -30,6 +30,8 @@ public List<String> buscarPorIdCarro(String id, Transaction tr) throws Exception
             ids.add(itemtag.toString());
         }
         return ids;
-    } // buscar   
+    } // buscar 
+
+
     
 }
