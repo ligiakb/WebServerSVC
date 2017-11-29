@@ -71,11 +71,13 @@ public class LeituraController extends Application {
         leitura.setValue(temperatureInternal);
         System.out.println("Dados recebidos");
         String tagsCorrigidas = parameters.substring(9);
-        ArrayList<String> myList = new ArrayList<String>(Arrays.asList(tagsCorrigidas.split("%7c")));
+        ArrayList<String> myList = new ArrayList<String>(Arrays.asList(tagsCorrigidas.split("%7C")));
         printList(myList);
         LeituraDAO dao = new LeituraDAO();
         Transaction tr = new Transaction();
+        
         try {
+            tr.begin();
             ArrayList<String> itensCarro = dao.buscarPorIdCarro("123", tr);
             //comparar listascomparaListas()
             //obter lista de ids faltantes

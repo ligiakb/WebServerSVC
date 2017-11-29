@@ -14,23 +14,31 @@ import java.sql.*;
 public class Transaction {
 
   // connection data
-  static final String ODBC_DRIVER = "sun.jdbc.odbc.JdbcOdbcDriver";
-  static final String DSN = "jdbc:odbc:PMRSAV";
-  static final String USER = "t01";
-  static final String PWD = "t01";
+  //static final String ODBC_DRIVER = "sun.jdbc.odbc.JdbcOdbcDriver";
+  static final String ODBC_DRIVER = "com.mysql.jdbc.Driver";
+  static final String DSN = "jdbc:mysql://localhost:3306/mydb";
+  static final String USER = "root";
+  static final String PWD = "1234";
 
   private Connection _conexao = null;
   private boolean _readOnly = false;
 
   public void begin() throws Exception{
-      Class.forName(ODBC_DRIVER).newInstance();
+      
+      
+      System.out.println("conexao1");
+      Class.forName(ODBC_DRIVER);
+      System.out.println("conexao2");
       _conexao = DriverManager.getConnection(DSN,USER,PWD);
+      System.out.println("conexao3");
       _conexao.setAutoCommit(false);
 	  _readOnly = false;
   } // begin
 
   public void beginReadOnly() throws Exception{
+      
       Class.forName(ODBC_DRIVER).newInstance();
+      
       _conexao = DriverManager.getConnection(DSN,USER,PWD);
 	  _readOnly = true;
   } // begin
