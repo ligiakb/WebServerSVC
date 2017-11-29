@@ -79,6 +79,9 @@ public class LeituraController extends Application {
         try {
             tr.begin();
             ArrayList<String> itensCarro = dao.buscarPorIdCarro("123", tr);
+            for(int i = 0; i< itensCarro.size(); i++){
+                System.out.println("teste");
+            }
             //comparar listascomparaListas()
             //obter lista de ids faltantes
             //página que vai exibir o resultado deve fazer a solicitação para o WebServer
