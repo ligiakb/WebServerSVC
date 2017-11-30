@@ -71,7 +71,7 @@ public class LeituraController extends Application {
         //remocao da parte escrita tagsPipe=, referente ao parametro do POST
         String tagsCorrigidas = parameters.substring(9);
         //Split das tags enviadas, que estao no formato tag1|tag2|tag3|...
-        ArrayList<String> myList = new ArrayList<String>(Arrays.asList(tagsCorrigidas.split("%7C")));
+        ArrayList<String> myList = new ArrayList<String>(Arrays.asList(tagsCorrigidas.split("%7c")));
         printList(myList);
         LeituraDAO dao = new LeituraDAO();
         //Instanciacao da transaction
