@@ -67,8 +67,6 @@ public class LeituraController extends Application {
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Produces(MediaType.APPLICATION_JSON)
     public Leitura postTemperature(String parameters){
-        String temperatureInternal = parameters;
-        leitura.setValue(temperatureInternal);
         System.out.println("Dados recebidos");
         //remocao da parte escrita tagsPipe=, referente ao parametro do POST
         String tagsCorrigidas = parameters.substring(9);
@@ -108,9 +106,8 @@ public class LeituraController extends Application {
                 System.out.println(itemFaltante);
             }
             
-            //comparar listascomparaListas()
-            //obter lista de ids faltantes
-            //página que vai exibir o resultado deve fazer a solicitação para o WebServer
+            leitura.setValue(itensFaltantes);
+            
             
         } catch (Exception ex) {
             Logger.getLogger(LeituraController.class.getName()).log(Level.SEVERE, null, ex);

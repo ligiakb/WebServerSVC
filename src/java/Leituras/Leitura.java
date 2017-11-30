@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Leituras;
+import java.util.ArrayList;
 import javax.xml.bind.annotation.XmlRootElement;
 
 
@@ -26,21 +27,22 @@ public static Leitura getInstance(){
 }
 
 //Ex.: private float temperature = (float)0.0; criar variavel que vai armazenar os ids enviaddos pelo leitor
-private String leitura = "";
+//private String leitura = "";
+public ArrayList<String> leitura;
 
 private Leitura(){
-    this.leitura = ""; //construtor inicia variavel com valor zero
+    this.leitura = null; //construtor inicia variavel com valor null
 }
 
-public Leitura(String listaids){ //construtor armazena valor de temperatura
+public Leitura(ArrayList<String> listaids){ //construtor armazena valor de temperatura
     this.leitura = listaids;
 }
 
-public void setValue (String listaids){
+public void setValue (ArrayList<String> listaids){
     this.leitura = listaids;
 }
 
-public String getValue(){
+public ArrayList<String> getValue(){
     return leitura;
 }
 
