@@ -28,8 +28,9 @@ public ArrayList<String> buscarPorIdCarro(String id, Transaction tr) throws Exce
             ItemTag itemtag = new ItemTag();
             itemtag.setIdTag(rs.getString("id_tag"));
             System.out.println(rs.getString("id_tag"));
-            ids.add(itemtag.toString());
+            ids.add(itemtag.getIdTag());
         }
+        
         return ids;
     } // buscar 
 

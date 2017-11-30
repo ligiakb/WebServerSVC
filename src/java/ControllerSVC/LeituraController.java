@@ -70,18 +70,44 @@ public class LeituraController extends Application {
         String temperatureInternal = parameters;
         leitura.setValue(temperatureInternal);
         System.out.println("Dados recebidos");
+        //remocao da parte escrita tagsPipe=, referente ao parametro do POST
         String tagsCorrigidas = parameters.substring(9);
+        //Split das tags enviadas, que estao no formato tag1|tag2|tag3|...
         ArrayList<String> myList = new ArrayList<String>(Arrays.asList(tagsCorrigidas.split("%7C")));
         printList(myList);
         LeituraDAO dao = new LeituraDAO();
+        //Instanciacao da transaction
         Transaction tr = new Transaction();
         
         try {
+            //abertura da conexao
             tr.begin();
+            //chama funcao de consulta na base de dados.
+            //Ela busca pelo ID da tag do carro na tabela de carros e traz essa
+            //lista pro controller.
             ArrayList<String> itensCarro = dao.buscarPorIdCarro("123", tr);
-            for(int i = 0; i< itensCarro.size(); i++){
-                System.out.println("teste");
+            ArrayList<String> itensFaltantes = new ArrayList<String>();
+            //Variavel que sera utilizada para verificar quais itens existem nas
+            //duas listas. Caso ele nao exista, eu adiciona
+            int existe;
+            for (String itemCarro : itensCarro) {
+                existe = 0;
+                for (String itemLido : myList){
+                    System.out.println("itens comparados:");
+                    System.out.println("itemCarro:" + itemCarro);
+                    System.out.println("itemLido:" + itemLido);
+                    if(Objects.equals(itemCarro,itemLido)){
+                        existe = 1;
+                    }
+                }
+                if(existe == 0){
+                    itensFaltantes.add(itemCarro);
+                }		
             }
+            for (String itemFaltante : itensFaltantes){
+                System.out.println(itemFaltante);
+            }
+            
             //comparar listascomparaListas()
             //obter lista de ids faltantes
             //página que vai exibir o resultado deve fazer a solicitação para o WebServer
