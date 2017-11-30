@@ -60,7 +60,7 @@ and open the template in the editor.
                         <button type="submit" class="btn btn-primary btn-sm" name="finalizar" id="finalizar" value="finalizar">FINALIZAR</button>
                     </form>
                 </h4>
-                
+                <!--Importando paginas e bibliotecas necessarias-->
                 <%@ page import= "ControllerSVC.LeituraController"%>
                 <%@ page import= "Leituras.Leitura"%>
                 <%@page import="java.util.ArrayList"%>
@@ -68,15 +68,17 @@ and open the template in the editor.
                 <%
                     //Caso o cliente tenha clicado no botao FINALIZAR, entra no if abaixo
                 if ( null != request.getParameterValues("finalizar")){
+                    //Pega a instancia do objeto de leitura
                     Leitura leitura = Leitura.getInstance();
+                    //pega os valores que existem no objeto de leitura
                     ArrayList<String> listaFaltante = leitura.getValue();
-                    %>Itens lidos:<%
+                    %>Itens faltantes:<%
+                    //itera pela lista de itens, e imprime
                     for(String itemLido : listaFaltante){
                         %>
                         
-                        <tr>
-                            <th><%=itemLido%></th>
-                        </tr>
+                        <%=itemLido%>
+                        <br/>
                     
                     <%}
                 }

@@ -86,18 +86,26 @@ public class LeituraController extends Application {
             ArrayList<String> itensCarro = dao.buscarPorIdCarro("123", tr);
             ArrayList<String> itensFaltantes = new ArrayList<String>();
             //Variavel que sera utilizada para verificar quais itens existem nas
-            //duas listas. Caso ele nao exista, eu adiciona
+            //duas listas. Caso ele nao exista, ele eh adicionado aa lista de 
+            //itens faltantes
             int existe;
+            //Itera entre todos os itens lidos da base de dados referentes ao carro
+            //pesquisado
             for (String itemCarro : itensCarro) {
+                //zera variavel de validacao
                 existe = 0;
+                //itera todos os itens da lista recebida pelo webservice
                 for (String itemLido : myList){
                     System.out.println("itens comparados:");
                     System.out.println("itemCarro:" + itemCarro);
                     System.out.println("itemLido:" + itemLido);
+                    //se o item existir na lista, seta flag para 1.
                     if(Objects.equals(itemCarro,itemLido)){
                         existe = 1;
                     }
                 }
+                //caso nao tenha sido setada para 1, quer dizer que item esta
+                //faltando
                 if(existe == 0){
                     itensFaltantes.add(itemCarro);
                 }		
@@ -105,9 +113,8 @@ public class LeituraController extends Application {
             for (String itemFaltante : itensFaltantes){
                 System.out.println(itemFaltante);
             }
-            
+            //atualiza valores do objeto de leitura com os itens faltantes.
             leitura.setValue(itensFaltantes);
-            
             
         } catch (Exception ex) {
             Logger.getLogger(LeituraController.class.getName()).log(Level.SEVERE, null, ex);
