@@ -13,7 +13,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-    <title>Web Carros de Emergência</title>
+    <title>Verificação de Carros de Emergência</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
@@ -23,14 +23,14 @@ and open the template in the editor.
 </head>
 
 <header class="navbar fixed-top navbar-light tgi-header">
-    <h1>Web Carros de Emergência</h1>
+    <h1>Verificação de Carros de Emergência</h1>
 </header>
 <!-- See bootstrap documentation for navbar positioning options. All classes used here are bootstrap defaults, with the exception of the ones starting with prefix 'tgi-' -->
 <nav class="navbar fixed-top navbar-dark bg-dark tgi-nav">
     <ul class="nav">
         <li class="nav-item">
             <i class="fa fa-user"></i>
-            Ciclano (enferm)
+            Maria (Enfermagem)
         </li>
         <li class="nav-item">
             <a class="nav-link active" href="#">Notificações</a>
@@ -53,6 +53,7 @@ and open the template in the editor.
             <div class="col-10">
                 <br/><br/>
                 <h3>Conferir carro</h3>
+                </br>
                 <h4>Para iniciar a leitura do carro, selecione a opção <b>START</b> no aplicativo do leitor.</h4>
                 <h4>Após finalizar a leitura, aperte o botão <b>STOP</b> no aplicativo do leitor.</h4>
                 <h4>Para concluir a leitura e ativar a integração das informações, clique no botão 

@@ -1,0 +1,26 @@
+/* All styles created for the project (and not inherited from bootstrap) follow nomenclature starting with 'tgi-' */
+
+.tgi-header {
+    height: 60px;
+    background-color: #f2f2f2;
+}
+
+.tgi-nav {
+    width: 120px;
+    height: 100%;
+    margin-top: 60px;
+    color: #ffffff;
+    /* margin is used to align nav to header */
+}
+
+.tgi-main {
+    margin-top: 60px;
+    margin-left: 120px;
+    padding-top: 3em;
+    /* this class is used in every page to align contents to sidebar and header */
+}
+
+.tgi-card {
+    margin-bottom: 30px;
+    padding: 2em 3em;
+}
