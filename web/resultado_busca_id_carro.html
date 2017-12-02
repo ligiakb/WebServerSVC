@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+    <title>Web Carros de Emergência</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/font-awesome.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+</head>
+
+<header class="navbar fixed-top navbar-light tgi-header">
+    <h1>Web Carros de Emergência</h1>
+</header>
+<!-- See bootstrap documentation for navbar positioning options. All classes used here are bootstrap defaults, with the exception of the ones starting with prefix 'tgi-' -->
+<nav class="navbar fixed-top navbar-dark bg-dark tgi-nav">
+    <ul class="nav">
+        <li class="nav-item">
+            <i class="fa fa-user"></i>
+            Fulano (admin)
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Carros</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Usuários</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Itens</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Sair</a>
+        </li>
+    </ul>
+</nav>
+   <main class="tgi-main">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10">
+              <h3>Resultado da busca por ID</h3>
+                    <table class="table table-sm">
+                    <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Unidade</th>
+                    <th scope="col">Data da última conferência</th>
+                    <th scope="col">Status</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <th scope="row">1</th>
+                    <td>66523669</td>
+                    <td>UTI-Adulto</td>
+                    <td>07/11/2017</td>
+                    <td>Completo</td>
+                    <td><button type="button" class="btn btn-danger">Excluir</button></td>
+                    <td><button type="button" class="btn btn-primary btn-sm">Editar</button></td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    </br>
+                    <center><button type="button" class="btn btn-primary btn-sm">Nova busca</button></center></br>
+                    <center><button type="button" class="btn btn-secondary btn-sm">Tela inicial</button></center>
+                </div>   
+            </div>
+        </div>
+    </main>
+</html>

@@ -84,7 +84,44 @@ and open the template in the editor.
                     <%}
                 }
                 %>
-                
+                <!--<table class="table table-sm">
+                    <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">ID carro</th>
+                    <th scope="col">Unidade</th>
+                    <th scope="col">Data da última conferência</th>
+                    <th scope="col">Status</th>
+                    <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <th scope="row">1</th>
+                    <td>92759574</td>
+                    <td>Maternidade</td>
+                    <td>07/11/2017</td>
+                    <td>Incompleto</td>
+                    <td><button type="button" class="btn btn-primary btn-sm">Detalhes</button></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">2</th>
+                    <td>28563038</td>
+                    <td>Ambulatório</td>
+                    <td>17/11/2017</td>
+                    <td>Incompleto</td>
+                    <td><button type="button" class="btn btn-primary btn-sm">Detalhes</button></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">3</th>
+                    <td>19473938</td>
+                    <td>UTI-Adulto</td>
+                    <td>20/11/2017</td>
+                    <td>Incompleto</td>
+                    <td><button type="button" class="btn btn-primary btn-sm">Detalhes</button></td>
+                    </tr>
+                    </tbody>
+                    </table>-->
                 
                 <!--<div class="row justify-content-center">
                     <div class="form-group col-md-6">

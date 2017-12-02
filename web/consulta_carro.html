@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+    <title>Web Carros de Emergência</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/font-awesome.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+</head>
+
+<header class="navbar fixed-top navbar-light tgi-header">
+    <h1>Web Carros de Emergência</h1>
+</header>
+<!-- See bootstrap documentation for navbar positioning options. All classes used here are bootstrap defaults, with the exception of the ones starting with prefix 'tgi-' -->
+<nav class="navbar fixed-top navbar-dark bg-dark tgi-nav">
+    <ul class="nav">
+        <li class="nav-item">
+            <i class="fa fa-user"></i>
+            Fulano (admin)
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Carros</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Usuários</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Itens</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Sair</a>
+        </li>
+    </ul>
+</nav>
+    <main class="tgi-main">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <h3>Consultar carro</h3>
+                    <form>
+                        <div class="form-group col-md-4">
+                        <label for="inputState">Listar por unidade</label>
+                        <select id="inputState" class="form-control">
+                        <option selected>Selecione...</option>
+                        <option>UTI-Adulto</option>
+                        <option>CO</option>
+                        <option>Maternidade</option>
+                        <option>Ambulatório</option>
+                        <option>Unidade Coronariana</option>
+                        <option>Unidade Semi-intensiva Adulto</option>
+                        </select>
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Listar</button>
+                        </div>
+                        
+                        <div class="form-group col-md-4">
+                        <label class="col-form-label" for="formGroupExampleInput">Buscar por ID:</label>
+                        <input class="form-control mr-sm-2" type="search" placeholder="Ex.: 13134362" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                        </div>
+                        
+                        <div class="form-group col-md-4">
+                        <label for="inputState">Listar por status</label>
+                        <select id="inputState" class="form-control">
+                        <option selected>Selecione...</option>
+                        <option>Completo</option>
+                        <option>Incompleto</option>
+                        <option>Pedido separado</option>
+                        </select>
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Listar</button>
+                        </div>
+                    </form>
+                <button type="button" class="btn btn-primary btn-sm">Listar todos</button>
+                <button type="button" class="btn btn-secondary btn-sm">Tela inicial</button>
+            </div>
+        </div>
+    </div>
+</main>
+</html>

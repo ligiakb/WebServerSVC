@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+   <head>
+    <title>Web Carros de Emergência</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/font-awesome.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+</head>
+
+<header class="navbar fixed-top navbar-light tgi-header">
+    <h1>Web Carros de Emergência</h1>
+</header>
+<!-- See bootstrap documentation for navbar positioning options. All classes used here are bootstrap defaults, with the exception of the ones starting with prefix 'tgi-' -->
+<nav class="navbar fixed-top navbar-dark bg-dark tgi-nav">
+    <ul class="nav">
+        <li class="nav-item">
+            <i class="fa fa-user"></i>
+            Ciclano (enferm)
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Notificações</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Conferir carro</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Consultar carros</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Sair</a>
+        </li>
+    </ul>
+</nav>
+
+    
+    <main class="tgi-main">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10">
+              <h3>Resultado conferência</h3>
+              <h4>Carro: 48347246 - UTI</h4>
+              <h4>Usuário: 2145 Júlia Soares</h4>
+              <h5>Itens solicitados</h5>
+                    <table class="table table-sm">
+                    <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">ID genérico</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Dosagem</th>
+                    <th scope="col">Unidade</th>
+                    <th scope="col">Volume</th>
+                    <th scope="col">Unidade</th>
+                    <th scope="col">Quantidade</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <th scope="row">1</th>
+                    <td>9869</td>
+                    <td>Seringa S.F.</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>10</td>
+                    <td>ml</td>
+                    <td>1</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">2</th>
+                    <td>6274</td>
+                    <td>Seringa</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>20</td>
+                    <td>ml</td>
+                    <td>2</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">3</th>
+                    <td>6742</td>
+                    <td>Sustrate</td>
+                    <td>10</td>
+                    <td>mg</td>
+                    <td>10</td>
+                    <td>ml</td>
+                    <td>1</td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    </br>
+                    <center><button type="button" class="btn btn-primary btn-sm">Enviar pedido</button></center></br>
+                    <center><button type="button" class="btn btn-secondary btn-sm">Cancelar</button></center>
+                </div>   
+            </div>
+        </div>
+    </main>
+
+</html>
+

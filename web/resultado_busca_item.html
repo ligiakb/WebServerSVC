@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+    <title>Web Carros de Emergência</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/font-awesome.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+</head>
+
+<header class="navbar fixed-top navbar-light tgi-header">
+    <h1>Web Carros de Emergência</h1>
+</header>
+<!-- See bootstrap documentation for navbar positioning options. All classes used here are bootstrap defaults, with the exception of the ones starting with prefix 'tgi-' -->
+<nav class="navbar fixed-top navbar-dark bg-dark tgi-nav">
+    <ul class="nav">
+        <li class="nav-item">
+            <i class="fa fa-user"></i>
+            Beltrano (farma)
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Pedidos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Consulta de carros</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Consulta de itens</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Sair</a>
+        </li>
+    </ul>
+</nav>
+
+<main class="tgi-main">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <h3>Resultado da busca por item</h3>
+                    <table class="table table-sm">
+                    <thead>
+                    <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Dosagem</th>
+                    <th scope="col">Unidade</th>
+                    <th scope="col">Volume</th>
+                    <th scope="col">Unidade</th>
+                    <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td>Seringa</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>20</td>
+                    <td>ml</td>
+                    <td><button type="button" class="btn btn-primary btn-sm">Ver distribuição</button></td>
+                    </tr>
+                    <tr>
+                    <td>Seringa</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>10</td>
+                    <td>ml</td>
+                    <td><button type="button" class="btn btn-primary btn-sm">Ver distribuição</button></td>
+                    </tr>
+                    <tr>
+                    <td>Seringa</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>5</td>
+                    <td>ml</td>
+                    <td><button type="button" class="btn btn-primary btn-sm">Ver distribuição</button></td>
+                    </tr>
+                    <tr>
+                    <td>Seringa retrátil</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>5</td>
+                    <td>ml</td>
+                    <td><button type="button" class="btn btn-primary btn-sm">Ver distribuição</button></td>
+                    </tr>
+                    <tr>
+                    <td>Seringa retrátil</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>1</td>
+                    <td>ml</td>
+                    <td><button type="button" class="btn btn-primary btn-sm">Ver distribuição</button></td>
+                    </tr>
+                    </tbody>
+                    </table>
+                <h4>Distribuição</h4>
+                    <table class="table table-sm">
+                    <thead>
+                    <tr>
+                    <th scope="col">Tipo de lista</th>
+                    <th scope="col">Quantidade</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td>UTI-Adulto</td>
+                    <td>5</td>
+                    </tr>
+                    <tr>
+                    <td>CO</td>
+                    <td>5</td>
+                    </tr>
+                    <tr>
+                    <td>Maternidade</td>
+                    <td>10</td>
+                    </tr>
+                    <tr>
+                    <td>Ambulatório</td>
+                    <td>2</td>
+                    </tr>
+                    <tr>
+                    <td>Unidade Coronariana</td>
+                    <td>4</td>
+                    </tr>
+                    <tr>
+                    <td>Unidade Semi-intensiva Adulto</td>
+                    <td>2</td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    <center><button type="button" class="btn btn-primary btn-sm">Nova busca</button></center></br>
+                    <center><button type="button" class="btn btn-secondary btn-sm">Tela inicial</button></center>
+            </div>
+        </div>
+    </div>
+</main>
+
+</html>
