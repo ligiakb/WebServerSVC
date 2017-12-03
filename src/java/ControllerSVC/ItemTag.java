@@ -25,5 +25,11 @@ public void setIdTag(String id) {
     _IdTag = id;
 } // setId
 
-
+public int getIdItemGen() {
+    return _IdItemGen;
+} // getIdItemGen
+    
+public void setIdItemGen(int id) {
+    _IdItemGen = id;
+} // setId
 }

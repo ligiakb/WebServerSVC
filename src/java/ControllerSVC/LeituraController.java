@@ -85,6 +85,7 @@ public class LeituraController extends Application {
             //lista pro controller.
             ArrayList<String> itensCarro = dao.buscarPorIdCarro("123", tr);
             ArrayList<String> itensFaltantes = new ArrayList<String>();
+            ArrayList<String> descItem = new ArrayList<String>();
             //Variavel que sera utilizada para verificar quais itens existem nas
             //duas listas. Caso ele nao exista, ele eh adicionado aa lista de 
             //itens faltantes
@@ -111,10 +112,14 @@ public class LeituraController extends Application {
                 }		
             }
             for (String itemFaltante : itensFaltantes){
+                int idItemGenerico = dao.obterIdItemGen(itemFaltante, tr);
+                int idTipoItem = dao.obterIdTipoItem(idItemGenerico, tr);
+                descItem.add(dao.descricaoItem(idTipoItem, tr));
                 System.out.println(itemFaltante);
             }
             //atualiza valores do objeto de leitura com os itens faltantes.
             leitura.setValue(itensFaltantes);
+            leitura.Descricao(descItem);
             
         } catch (Exception ex) {
             Logger.getLogger(LeituraController.class.getName()).log(Level.SEVERE, null, ex);

@@ -4,6 +4,7 @@
     Author     : Natalia
 --%>
 
+
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <!--
@@ -64,6 +65,7 @@ and open the template in the editor.
                 <!--Importando paginas e bibliotecas necessarias-->
                 <%@ page import= "ControllerSVC.LeituraController"%>
                 <%@ page import= "Leituras.Leitura"%>
+                <%@ page import= "Transaction.Transaction"%>
                 <%@page import="java.util.ArrayList"%>
                 
                 <%
@@ -71,15 +73,24 @@ and open the template in the editor.
                 if ( null != request.getParameterValues("finalizar")){
                     //Pega a instancia do objeto de leitura
                     Leitura leitura = Leitura.getInstance();
+                    
                     //pega os valores que existem no objeto de leitura
+                    //Transaction tr = new Transaction();
+                   // LeituraDAO dao = new LeituraDAO();
                     ArrayList<String> listaFaltante = leitura.getValue();
+                    ArrayList<String> desc = leitura.nomes;
+                    
                     %>Itens faltantes:<%
                     //itera pela lista de itens, e imprime
-                    for(String itemLido : listaFaltante){
+                    for (int i=0; i<listaFaltante.size();i++){
+                        System.out.println(listaFaltante.get(i));
+                        System.out.println(desc.get(i));
+                        String id = listaFaltante.get(i);
+                        String nome = desc.get(i);
                         %>
-                        
-                        <%=itemLido%>
-                        <br/>
+                        <%=id%>&nbsp<%=nome%>
+                        <br/>               
+                             
                     
                     <%}
                 }

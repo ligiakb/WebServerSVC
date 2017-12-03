@@ -23,4 +23,12 @@ public void setIdItemGen(int id) {
     _IdItemGen = id;
 } // setId
 
+public int getIdTipoItem() {
+    return _IdTipoItem;
+} // getId
+    
+public void setIdTipoItem(int id) {
+    _IdTipoItem = id;
+} // setId
+
 }

@@ -30,6 +30,12 @@ public static Leitura getInstance(){
 //private String leitura = "";
 public ArrayList<String> leitura;
 
+public ArrayList<String> nomes;
+
+public void Descricao(ArrayList<String> nome){
+    this.nomes = nome;
+}
+
 private Leitura(){
     this.leitura = null; //construtor inicia variavel com valor null
 }
