@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -13,53 +14,54 @@ and open the template in the editor.
         crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheets/font-awesome.css">
     <link rel="stylesheet" href="stylesheets/styles.css">
-</head>
+    </head>
 
-<header class="navbar fixed-top navbar-light tgi-header">
+    <header class="navbar fixed-top navbar-light tgi-header">
     <h1>Verificação de Carros de Emergência</h1>
-</header>
+    </header>
 <!-- See bootstrap documentation for navbar positioning options. All classes used here are bootstrap defaults, with the exception of the ones starting with prefix 'tgi-' -->
-<nav class="navbar fixed-top navbar-dark bg-dark tgi-nav">
+    <nav class="navbar fixed-top navbar-dark bg-dark tgi-nav">
     <ul class="nav">
         <li class="nav-item">
             <i class="fa fa-user"></i>
-            Beltrano (farma)
+            Login
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="#">Pedidos</a>
+            <a class="nav-link active" href="#"></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Consulta de carros</a>
+            <a class="nav-link" href="#"></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Consulta de itens</a>
+            <a class="nav-link" href="#"></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Sair</a>
+            <a class="nav-link" href="#"></a>
         </li>
     </ul>
-</nav>
+    </nav>
 
-    <main class="tgi-main">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-10">
-                    <h2>Olá, Beltrano!</h2>
-                    <div class="card tgi-card">
-                        <div class="row justify-content-center">
-                        <div class="col-6">
-                            <h3>Atender pedidos:</h3></br>
-                            <h4>Carro 34656955 - Maternidade</h4></br>
-                            <h5>Faltam 2 itens</h5>
-                        </div>
-                        <div class="col-4">
-                            <button type="button" class="btn btn-primary btn-sm">Atender</button>
-                        </div> 
-                        </div>
-                    
+<main class="tgi-main">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                
+                <form class="col-4">
+                    <div class="form-group">
+                        <label for="exampleDropdownFormEmail2">Usuário</label>
+                        <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="Einstein ID">
                     </div>
+                    <div class="form-group">
+                        <label for="exampleDropdownFormPassword2">Senha</label>
+                        <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Senha">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                </form>
+
                 </div>
             </div>
         </div>    
     </main>
 </html>
+
